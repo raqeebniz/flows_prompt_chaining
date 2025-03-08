@@ -1,0 +1,23 @@
+[project]
+name = "flows-prompt-chaining"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "abdul raqeeb", email = "nizamaniabdurraqeeb@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "crewai>=0.100.1",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+flows-prompt-chaining = "flows_prompt_chaining:main"
+llm = "flows_prompt_chaining.flow_prompt_chaining:kickoff"
+llm_plot = "flows_prompt_chaining.flow_prompt_chaining:plot"
+run_route = "flows_prompt_chaining.routing_conditional_task:go"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
